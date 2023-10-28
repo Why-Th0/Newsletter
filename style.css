@@ -1,0 +1,13 @@
+body {
+  background-color: aqua;
+}
+
+.main_center {
+  width: 70px;
+  display: grid;
+  margin: auto;
+}
+
+.image {
+  width: 70px;
+}
