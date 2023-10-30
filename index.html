@@ -7,23 +7,31 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="main_center">
-      <img src="assets/images/illustration-sign-up-desktop.svg" />
-
-      <div class="texts">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on</p>
-        <ul>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-      </div>
-      <div class="email">
-        <label class="email"><strong>Email address</strong></label>
-        <textarea placeholder="email@company.com" autofocus></textarea>
-        <button type="button">Subscribe to monthly newsletter</button>
+    <div class="card hide">
+      <div class="left">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on</p>
+          <ul>
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+      <form >
+          <label id="email-label">
+            <p>Email address</p>
+            <p id="invalid-email">Valid email required</p>  
+          </label>
+          <input type="email" id="input-box" placeholder="email@company.com" required ></input>
+          <button type="submit" id="button-box">Subscribe to monthly newsletter</button>
+      </form>
+    </div>
+      <div class="right">
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="Illustration-desktop"
+        />
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
