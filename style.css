@@ -22,7 +22,6 @@ body {
 }
 
 .card {
-  display: none;
   width: 800px;
   background-color: hsl(0, 0%, 100%);
   display: flex;
@@ -54,10 +53,6 @@ li {
 form {
   display: flex;
   flex-direction: column;
-  /* grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(3, auto); */
-  /* justify-content: flex-start;
-  align-items: center; */
 }
 
 input {
@@ -68,7 +63,7 @@ input {
   border: 1px solid hsl(231, 7%, 60%);
 }
 
-button {
+.button-box {
   font-family: inherit;
   padding: 10px 20px;
   margin-top: 20px;
@@ -98,21 +93,77 @@ h1 {
 #invalid-email {
   color: hsl(4, 100%, 67%);
 }
-/* #email-label {
-  grid-column: col 1;
-}
 
-#error-label {
-  grid-column: col 2;
+.confirmation-message {
+  font-family: MyFont;
+  background-color: white;
+  width: 350px;
   font-family: inherit;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.dismiss {
+  font-family: inherit;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  outline: none;
+  border-radius: 5px;
+  background-color: hsl(235, 18%, 26%);
+  color: white;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.hide {
+  display: none;
+}
+
+.wrong {
+  background-color: pink;
   color: hsl(4, 100%, 67%);
-  align-self: flex-end;
+  border-color: red;
 }
 
-#input-box {
-  grid-column: col / span 2;
+span {
+  font-style: MyFont;
+  font-weight: bold;
 }
 
-#button-box {
-  grid-column: col / span 2;
-} */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column-reverse;
+    width: 90%;
+    padding: 0;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .right {
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+  }
+
+  .right img {
+    content: url(./assets/images/illustration-sign-up-mobile.svg);
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .confirmation-message {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-radius: 0;
+  }
+}
