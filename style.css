@@ -166,4 +166,7 @@ span {
     flex-wrap: wrap;
     border-radius: 0;
   }
+
+  .hide {
+    display: none;
 }
